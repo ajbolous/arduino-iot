@@ -1,14 +1,13 @@
 //FirebaseESP8266.h must be included before ESP8266WiFi.h
 #include "FirebaseESP8266.h"
+
 #include <ESP8266WiFi.h>
 #include <DHTesp.h>
 
 void InitWiFi(const String &ssid, const String &password)
 {
   WiFi.begin(ssid, password);
-  Serial.print("Connecting to Wi-Fi");
-  while (WiFi.status() != WL_CONNECTED)
-    delay(300);
+  while (WiFi.status() != WL_CONNECTED) delay(300);
   Serial.println("Connected with IP: ");
   Serial.println(WiFi.localIP());
 }
@@ -55,8 +54,8 @@ Node node("home-office", 12);
 void setup()
 {
   Serial.begin(115200);
-  InitWiFi("AbuJaberHome", "59405940");
-  InitFireBase("arduino-iot-2019.firebaseio.com", "ptnN6qEkNdazs22bc1F31G0jFSW3JrOHUgZIxfvq");
+  InitWiFi("AbuJaberHome", "");
+  InitFireBase("arduino-iot-2019.firebaseio.com", "");
 }
 
 void loop()

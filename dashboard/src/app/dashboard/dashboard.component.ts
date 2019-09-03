@@ -18,7 +18,6 @@ export class DashboardComponent implements OnInit {
 
   onResize(event) {
     this.numberOfCols = (window.innerWidth <= 800) ? 1 : 2;
-    console.log(window.innerWidth);
   }
 
   ngOnInit() {
