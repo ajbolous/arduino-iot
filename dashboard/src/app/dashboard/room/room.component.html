@@ -1,0 +1,20 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{this.roomId}}</mat-card-title>
+    <mat-card-subtitle><span
+        [ngStyle]="{'color': alive() ? 'green' : 'red'}">{{alive() ? "Connected" : "Offline"}}</span>
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <div style="display:block; width:100%; height: 300px">
+      <canvas baseChart [datasets]="chartData" height="300px" [options]="chartOptions" [labels]="chartLabels"
+        chartType="line"></canvas>
+    </div>
+
+  </mat-card-content>
+  <mat-card-actions>
+
+      <span><strong>Temperature</strong>: {{lastTemperature.toPrecision(4)}}</span> <span style="margin-left:20px"><strong>Humidity</strong>:
+        {{lastHumidity.toPrecision(4)}}</span> 
+      </mat-card-actions>
+</mat-card>

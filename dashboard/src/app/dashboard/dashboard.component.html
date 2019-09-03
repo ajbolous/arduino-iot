@@ -1,0 +1,9 @@
+<br>
+<mat-grid-list [cols]="numberOfCols" rowHeight="450px" (window:resize)="onResize($event)">
+  <mat-grid-tile
+      [colspan]="1"
+      [rowspan]="1"
+      *ngFor="let node of this.nodes">
+      <app-room [roomId]="node" style="width:100%; height: 100%; margin: 5px;"></app-room>
+  </mat-grid-tile>
+</mat-grid-list>
