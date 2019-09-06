@@ -1,6 +1,4 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ChartDataSets, ChartOptions } from 'chart.js';
-import { BaseChartDirective, Label } from 'ng2-charts';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { map } from 'rxjs/operators';
 
@@ -21,7 +19,7 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.onResize(undefined);
+    this.onResize({});
     this.db.list('/nodes').snapshotChanges().pipe(map(changes => {
       return changes.map(c => ({ key: c.payload.key, val: c.payload.val() }));
     })).subscribe(items => {
@@ -29,6 +27,5 @@ export class DashboardComponent implements OnInit {
       this.nodes = [];
       items.forEach(item => this.nodes.push(item.key));
     });
-
   }
 }

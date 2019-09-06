@@ -22,8 +22,11 @@ export class RoomComponent implements OnInit {
       display: false
     },
     scales: {
-      xAxes: [{ gridLines: { display: false }, ticks: { display: false}}],
-      yAxes: [{ gridLines: { display: false }, id: 'T', ticks: { stepSize: 2 }, }, { id: 'H', gridLines: { display: false }, ticks: { stepSize: 2 } }]
+      xAxes: [{ gridLines: { display: false }, ticks: { display: false } }],
+      yAxes: [
+        { gridLines: { display: false }, id: 'T', ticks: { stepSize: 2 }, },
+        { id: 'H', gridLines: { display: false }, ticks: { stepSize: 2 } }
+      ]
     }
   };
   chartLabels: Label[] = [];
