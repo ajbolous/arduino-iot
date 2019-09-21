@@ -23,6 +23,7 @@ void setup()
     InitFireBase("arduino-iot-2019.firebaseio.com",
                  "ptnN6qEkNdazs22bc1F31G0jFSW3JrOHUgZIxfvq");
     pinMode(LED_BUILTIN, OUTPUT);
+    digitalWrite(LED_BUILTIN, HIGH);
 }
 
 FirebaseData firebaseData;
