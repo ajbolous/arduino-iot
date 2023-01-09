@@ -2,8 +2,8 @@
   "name": "arduino-iot-2019",
   "description": "IOT workshop for arduino",
   "dependencies": {
-    "firebase-admin": "~7.1.1",
-    "firebase-functions": "^2.2.1"
+    "firebase-admin": "~11.4.1",
+    "firebase-functions": "^4.1.1"
   },
   "devDependencies": {
     "chai": "^3.5.0",
